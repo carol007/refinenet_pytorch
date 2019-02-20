@@ -127,4 +127,8 @@ class RefineNetBlock(BaseRefineNetBlock):
     def __init__(self, features, *shapes):
         super().__init__(features, ResidualConvUnit, MultiResolutionFusion,
                          ChainedResidualPool, *shapes)
-
+        
+class RefineNetBlockImprovedPooling(nn.Module):
+    def __init__(self, features, *shapes):
+        super().__init__(features, ResidualConvUnit, MultiResolutionFusion,
+                         ChainedResidualPoolImproved, *shapes)
